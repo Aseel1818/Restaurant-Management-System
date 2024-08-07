@@ -74,7 +74,7 @@ The Restaurant Management System is designed to streamline restaurant operations
 ![Orders Page](images/OrdersPage.png)
 *Orders Page: Displays orders with options to filter by status.*
 
-![Admin Panel](path/to/admin-panel-image.png)
+![Admin Panel](images/AdminPanelPage.png)
 *Admin Panel: Provides an overview of orders, statistics, and more.*
 
 ## 🗺️ Database Schema
