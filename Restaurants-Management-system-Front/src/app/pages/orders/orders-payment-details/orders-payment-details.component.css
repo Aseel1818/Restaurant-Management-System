@@ -1,0 +1,101 @@
+mat-card-title {
+  padding: 7px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  font-weight: bold;
+  font-size: medium;
+  border-bottom: 2px solid #ccc;
+  top: 7px;
+}
+
+mat-card-content {
+  height: 1500px;
+  overflow-y: auto;
+}
+
+.paymentDet {
+  transform: translateX(25%);
+}
+
+.custom-card {
+  width: 300px;
+  height: 491px;
+  top: 28px;
+}
+
+@media (max-width: 768px) {
+  .custom-card {
+    margin: auto;
+    transform: none;
+  }
+}
+
+.pay-button-container {
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.payButton:hover {
+  background-color: #0077C2;
+  color: white;
+  cursor: pointer;
+}
+
+.payButton {
+  margin-bottom: 22px;
+}
+
+.column-container {
+  margin-top: 12px;
+  margin-bottom: 10px;
+  display: table;
+}
+
+.details-item,
+.details-item-name {
+  width: 24.33%;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  font-size: medium;
+}
+
+.details-item-name {
+  font-size: 14px;
+}
+
+.container_details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  background-color: whitesmoke;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.select-table {
+  width: 120px;
+  text-align: right;
+}
+
+.container_details.isPaid {
+  text-decoration: line-through;
+}
+
+.alert-danger {
+  font-size: 15px;
+  color: rgb(234, 95, 95);
+  margin-left: 20%;
+  margin-bottom: 10%;
+}
+
+.selectAll {
+  width: 70px;
+  font-size: small;
+  height: 20px;
+  background-color: #cbe7f9;
+  color: black;
+}

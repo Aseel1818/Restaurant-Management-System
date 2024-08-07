@@ -1,0 +1,22 @@
+.sidenavmat-nav-list {
+  margin-top: 20%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.mat-toolbar {
+  background-color: #fafafa;
+}
+
+.logout-icon {
+  position: absolute;
+  bottom: 0;
+}

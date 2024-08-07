@@ -1,0 +1,79 @@
+/* Ensure table width is sufficient */
+table {
+  border-radius: 20px;
+  width: 768px;
+}
+
+/* Add styles to handle long text */
+td {
+  text-align: center;
+  padding: 5px;
+  background-color: #FAFAFA;
+  word-break: break-word; /* Ensures long words break and wrap */
+  white-space: pre-wrap; /* Preserves whitespace and wraps text */
+  max-width: 200px; /* Adjust as needed */
+  overflow-wrap: break-word; /* For better text wrapping */
+  line-height: 1.5; /* Adjust line height to improve readability */
+}
+
+/* Specific styling for notes column */
+td.mat-cell.details {
+  max-width: 200px; /* Adjust width as needed */
+}
+
+th {
+  text-align: center;
+  padding: 5px;
+  background-color: #EAF0F0;
+  color: black;
+}
+
+.orders {
+  height: calc(100vh - 100px);
+  overflow: auto;
+}
+
+.paymentStatus {
+  width: 150px;
+  font-size: small;
+  padding-top: 20px;
+}
+
+.payment-status {
+  font-size: medium;
+  height: 30px;
+  background-color: #CBE7F9;
+  color: black;
+}
+
+.paid {
+  background-color: #C0F181;
+}
+
+.not-paid {
+  background-color: #FF9999;
+}
+
+.joinButton {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+}
+
+.table-busy {
+  background-color: #C0F181;
+}
+
+.functionality {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  margin: 20px;
+}
+
+.doJoin {
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}

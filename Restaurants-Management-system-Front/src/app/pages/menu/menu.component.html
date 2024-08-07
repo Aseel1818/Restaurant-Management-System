@@ -1,0 +1,83 @@
+<div class="search-container row smoke">
+    <input (keyup)="filterItems()" [(ngModel)]="searchQuery" placeholder="Search items" type="text">
+    <mat-icon>search</mat-icon>
+</div>
+<div *ngIf="categories" class="categories row wrap">
+    <a (click)="getAllItems()" routerLink="/items" class="smoke">All</a>
+    <a *ngFor="let category of categories" class="smoke" routerLink="/rest/category/{{category.id}}">
+        {{category.name}}
+    </a>
+</div>
+<div class="container row">
+    <div class="item_container row wrap">
+        <mat-card *ngFor="let item of filteredItems" class="items" (click)="!editMode ? addToOrder(item) : null">
+            <img class="item-img full-width" mat-card-image src="{{item.imageUrl}}">
+            <mat-card-content class="items_content center smoke wrap">
+                <div class="row item-details">
+                    <div *ngIf="!editMode || editedItem !== item" class="item-name">{{item.name}}</div>
+                    <div *ngIf="!editMode || editedItem !== item" class="item-price">{{item.price | currency:"ILS"}}</div>
+                    <div *ngIf="editMode && editedItem === item" class="name">
+                        <input class="updatedName radius" [(ngModel)]="updatedName" type="text">
+                    </div>
+                    <div *ngIf="editMode && editedItem === item" class="price">
+                        <input class="updatedPrice radius" [(ngModel)]="updatedPrice" type="number">
+                    </div>
+                    <button mat-icon-button *ngIf="admin" (click)="toggleEditMode(item)">
+                        <mat-icon class="edit-icon">{{ editedItem === item ? 'save' : 'edit' }}</mat-icon>
+                    </button>                                         
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="order-details">
+        <div *ngIf="order?.orderDetail?.length" class="bill-container">
+            <mat-card class="card">
+                <mat-card-content class="card-content">
+                    <table class="table full-width">
+                        <thead>
+                            <tr>
+                                <th class="table-header">Name</th>
+                                <th class="table-header">Quantity</th>
+                                <th class="table-header">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let item of order.orderDetail" class="table-row">
+                                <td class="table-cell">{{item.item.name}}</td>
+                                <td class="table-cell">
+                                    <div class="quantity-controls-wrapper">
+                                        <div class="quantity-controls">
+                                            <mat-icon class="small-icon" (click)="decrement(item)">remove</mat-icon>
+                                            <span class="quantity">{{item.quantity}}</span>
+                                            <mat-icon class="small-icon" (click)="increment(item)">add</mat-icon>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="table-cell">{{item.item.price | currency:"ILS"}}</td>
+                                <td class="table-cell">
+                                    <button mat-icon-button (click)="removeItem(item.item)" [disabled]="item.isPaid==true">
+                                        <mat-icon class="btn-red">delete</mat-icon>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </mat-card-content>
+                <mat-form-field class="note full-width">
+                    <mat-label for="note">Leave a note:</mat-label>
+                    <input [(ngModel)]="order.notes" matInput placeholder="Ex. Delivery" type="text">
+                </mat-form-field>
+                <mat-card-actions class="card-actions">
+                    <mat-select [(ngModel)]="selectedTable" class="select-table" placeholder="Select table">
+                        <ng-container *ngFor="let table of tables">
+                            <mat-option [value]="table.id">Table{{table.id}}</mat-option>
+                        </ng-container>
+                    </mat-select>
+                    <button (click)="addSelectedItemsToOrder(selectedTable)" class="order-button">
+                        {{ buttonText }}
+                    </button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>

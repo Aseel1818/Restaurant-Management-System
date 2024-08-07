@@ -1,0 +1,33 @@
+<div class="payments row" mat-dialog-content *ngIf="order">
+  <mat-card>
+    <mat-card-actions>
+      <p>Cash</p>
+      <input id="cashReceived" type="text" [(ngModel)]="amount">
+    </mat-card-actions>
+    <mat-card-actions>
+      <label id="currency">Currency</label>
+      <button type="button" id="nis" (click)="remaining()">₪</button>
+      <button type="button" id="dollar" (click)="dollarRemaining()">$</button>
+      <label >$={{dollarValue}} </label>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card>
+    <mat-card-actions id="remaining-mat-card">
+      <label class="currency"> Total Paid : {{amountCurrencyShekel}} ₪ | </label>
+      <label class="currency">{{amountCurrencyDollar}} $</label>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card>
+    <mat-card-actions id="remaining-mat-card">
+      <p>sum:{{sum.toFixed(digits)}}</p>
+      <p>Remaining:{{remainingValue}}</p>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card id="total-mat-card">
+    <p id="total">Total: {{ order.subTotal }} </p>
+  </mat-card>
+  <div *ngIf="showAlert" class="alert alert-danger">
+    The entered number does not cover item price
+  </div>
+  <button type="button" class="pay" (click)="pay()">PAY NOW</button>
+</div>
