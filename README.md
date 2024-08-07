@@ -65,7 +65,7 @@ The Restaurant Management System is designed to streamline restaurant operations
 
 ## 📸 Screenshots
 
-![Tables Page](Tables Page.png)
+![Tables Page](images/TablesPage.png)
 *Tables Page: Displays the status of tables in the restaurant.*
 
 ![Menu Page](path/to/menu-page-image.png)
