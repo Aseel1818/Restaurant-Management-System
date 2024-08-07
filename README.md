@@ -79,7 +79,7 @@ The Restaurant Management System is designed to streamline restaurant operations
 
 ## 🗺️ Database Schema
 
-![Database Schema](path/to/database-schema-image.png)
+![Database Schema](images/DatabaseDiagram.png)
 *Database schema diagram illustrating the structure of the system.*
 
 ## 📹 Demo Videos
