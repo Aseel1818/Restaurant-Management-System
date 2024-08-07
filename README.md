@@ -71,7 +71,7 @@ The Restaurant Management System is designed to streamline restaurant operations
 ![Menu Page](images/MenuPage.png)
 *Menu Page: Allows employees to manage and search for menu items.*
 
-![Orders Page](path/to/orders-page-image.png)
+![Orders Page](images/OrdersPage.png)
 *Orders Page: Displays orders with options to filter by status.*
 
 ![Admin Panel](path/to/admin-panel-image.png)
