@@ -84,8 +84,8 @@ The Restaurant Management System is designed to streamline restaurant operations
 
 ## 📹 Demo Videos
 
-- [User System Overview]([https://drive.google.com/file/d/your-video-id/view?usp=sharing](https://drive.google.com/file/d/1zBRtUVEb2hhnG7-TSvqokGeCwbiVcQ5x/view?usp=sharing))
-- [Admin Panel]([https://drive.google.com/file/d/your-video-id/view?usp=sharing](https://drive.google.com/file/d/1AIg9KyQb85Ghy5Ou6u34LntRB6JfIBoE/view?usp=sharing))
+- [User System Overview](https://drive.google.com/file/d/1zBRtUVEb2hhnG7-TSvqokGeCwbiVcQ5x/view?usp=sharing)
+- [Admin Panel](https://drive.google.com/file/d/1AIg9KyQb85Ghy5Ou6u34LntRB6JfIBoE/view?usp=sharing)
 
 
 ---
