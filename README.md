@@ -41,9 +41,9 @@ The Restaurant Management System is designed to streamline restaurant operations
 
 ### Prerequisites
 - Node.js
-- Angular CLI
+- Angular 
 - MySQL
-- Java Development Kit (JDK)
+- Java SpringBoot
 
 ### Frontend (Angular)
 1. Navigate to the Angular project directory.
